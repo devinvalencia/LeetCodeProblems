@@ -1,15 +1,5 @@
-/*
- * @lc app=leetcode id=1 lang=javascript
- *
- * [1] Two Sum
- */
+// Ctrl + Alt + N to run
 
-// @lc code=start
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
 var twoSum = function (nums, target) {
     var indexOne = -1;
     var indexTwo = -1;
@@ -21,8 +11,10 @@ var twoSum = function (nums, target) {
 
         for (var m = (n + 1); m < nums.length; m++) {
             if (nums[m] == balance) {
-                indexTwo = m;
+                indexTwo = nums.indexOf(nums[m]);
                 n = nums.length;
+                console.log('this is m = ' + nums[m]);
+                console.log(nums.indexOf(nums[m]));
             }
         }
     }
@@ -33,4 +25,5 @@ var twoSum = function (nums, target) {
 
     return indicies;
 };
-// @lc code=end
+
+console.log(twoSum([3,3],6));
